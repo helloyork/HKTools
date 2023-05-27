@@ -8,7 +8,8 @@
       return document.querySelector('.video-wrap').firstChild.src;
     },
     "detail.tmall.com": () => { return document.querySelectorAll('.lib-video')[1].src },
-    "item.taobao.com": () => { return document.querySelectorAll('.lib-video')[1].childNodes[0].src }
+    "item.taobao.com": () => { return document.querySelectorAll('.lib-video')[1].childNodes[0].src },
+    "www.xiaohongshu.com": ()=>{return document.querySelectorAll('#videoPlayer')[0].childNodes[0].src}
   };
   let target = Object.keys(lib).filter(v => (new URL(location.href)).host.includes(v));
   if (target.length) {
